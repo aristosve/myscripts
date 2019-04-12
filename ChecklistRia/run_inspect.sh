@@ -7,9 +7,9 @@
 
 ansible all -i $INVENTORY --limit $HOSTS -m debug -a "var=ansible_ssh_host"| grep "ansible_ssh_host" |sed 's/\x1b\[[0-9;]*m//g'|sed 's/"//g'|awk {'print $2'} |while read -r line
 do
-   echo inspec exec $INSPEC_PROFILE -t ssh://rot@$line $PORT $PASSWORD --reporter documentation junit:./$line.xml
+   echo inspec exec $INSPEC_PROFILE -t ssh://ria_soptec@$line $PORT $PASSWORD --reporter documentation junit:./$line.xml
 
-   inspec exec $INSPEC_PROFILE -t ssh://root@$line $PORT $PASSWORD --reporter documentation junit:./$line.xml
+   inspec exec $INSPEC_PROFILE -t ssh://ria_soptec@$line $PORT $PASSWORD --reporter documentation junit:./$line.xml
 done
 
 
