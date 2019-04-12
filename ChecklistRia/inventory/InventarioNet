@@ -1,0 +1,9 @@
+[net]
+net-acam1 ansible_ssh_host=10.1.190.1
+net-alju1 ansible_ssh_host=10.1.200.1
+net-atla1 ansible_ssh_host=10.1.210.1
+net-ixtl1 ansible_ssh_host=10.1.220.1
+net-joco1 ansible_ssh_host=10.1.230.1
+net-safe1 ansible_ssh_host=10.2.0.1
+net-zina1 ansible_ssh_host=10.2.40.1
+
